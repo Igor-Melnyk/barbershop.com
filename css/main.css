@@ -15,6 +15,7 @@ a, a .button, .button {
 	text-decoration: none;
 	color: #ffffff;
 	text-transform: uppercase;
+	border: 1px solid red;
 }
 .button {
 	display: inline-block;
