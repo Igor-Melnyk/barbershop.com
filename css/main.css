@@ -11,11 +11,10 @@
 	font-family: Lobster-Regular;
 	src: url(../fonts/Lobster-Regular.woff) format("woff"), url(../fonts/Lobster-Regular.woff2) format("woff2");
 }
-a, a .button, .button {
+a, .button {
 	text-decoration: none;
 	color: #ffffff;
 	text-transform: uppercase;
-	border: 1px solid red;
 }
 .button {
 	display: inline-block;
@@ -25,6 +24,7 @@ a, a .button, .button {
 	padding: 12px 0;
 	background-color: #000;
 	border: 2px solid #000;
+	font-family: ptsansnarrowbold;
 }
 .button:hover, .button:focus {
 	border: 2px solid #000;
@@ -51,28 +51,33 @@ body {
 header {
 	background-color: #000000;
 }
-nav ul li {
+.top-navigation__item {
 	float: left;
 	margin-right: 5px
 }
-nav ul li:last-child {
+.top-navigation__item:last-child {
 	float: right;
 	margin-right: 0;
 }
-nav ul li a {
+.top-navigation__item_button {
+	background-color: #000000;
+	border: none;
+}
+.top-navigation__item a, .top-navigation__item_button {
 	display: inline-block;
 	padding: 20px 10px;
 	height: 100%;
 	color: #ffffff;
 	font-size: 16px;
+	font-family: ptsansnarrowbold;
 }
-nav ul li a:hover, nav ul li a:focus {
+.top-navigation__item a:hover, .top-navigation__item a:focus, .top-navigation__item .top-navigation__item_button:hover {
 	outline: none;
 	background-color: #535353;
 }
 main {
 	background: url(../img/background.png) no-repeat #070707;
-	padding-top: 60px;
+	padding: 60px 0;
 }	
 .index-logo {
 	width: 371px;
@@ -145,27 +150,60 @@ main {
 .content-section .content-list .content-list-item:nth-child(2n) {
 	box-shadow: -3px 0 4px #c9c6c4;
 }
-.contact_form-list .contact_form-list-item {
+.contact-form {
+	max-width: 300px;
+}
+.contact_form__list_item:nth-child(2n-1) {
 	float: left;
-	width: 50%;
+}
+.contact_form__list_item:nth-child(2n) {
+	float: right;
+}
+.contact_form__list_item {
+	max-width: 140px;
 	margin-bottom: 10px;
 
 }
-.contact_form-list .contact_form-list-item label {
+.contact-form .contact_form__list_item label {
 	display: block;
 	margin-bottom: 10px;
 }
-.contact_form-list .contact_form-list-item input {
+.contact-form .contact_form__list_item input {
 	max-width: 140px;
-	height: 40px;
+	height: 30px;
 	border: 2px solid #000;
 	padding: 0 5px;
 }
 input[type="submit"] {
 	display: block;
-	width: 300px;
+	width: 100%;
 	
 }
 footer {
 	background-color: #252525;
+	padding: 65px 0;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.bottom-item {
+	float: left;
+	width: 33%;
+}
+.bottom-develop {
+	max-width: 140px;
+	float: right;
+}
+.bottom-social p {
+	text-align: center;
+}
+.bottom-social ul {
+	display: flex;
+	justify-content: center;
+}
+.bottom-social_item {
+	float: left;
+}
+.bottom-develop span {
+	text-align: center;
+	display: block;
 }

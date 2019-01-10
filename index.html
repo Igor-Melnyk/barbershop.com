@@ -9,14 +9,14 @@
 <!--	<div class="content">  -->
 		<header>
 			<div class="content">
-				<nav>
+				<nav class="top-navigation">
 					<ul>
-						<li><a href="#">ИНФОРМАЦИЯ</a></li>
-						<li><a href="#">НОВОСТИ</a></li>
-						<li><a href="#">ПРАЙС-ЛИСТ</a></li>
-						<li><a href="#">МАГАЗИН</a></li>
-						<li><a href="#">КОНТАКТЫ</a></li>
-						<li><button class="button" type="button">ВХОД</button></li>
+						<li class="top-navigation__item"><a href="#">ИНФОРМАЦИЯ</a></li>
+						<li class="top-navigation__item"><a href="#">НОВОСТИ</a></li>
+						<li class="top-navigation__item"><a href="#">ПРАЙС-ЛИСТ</a></li>
+						<li class="top-navigation__item"><a href="#">МАГАЗИН</a></li>
+						<li class="top-navigation__item"><a href="#">КОНТАКТЫ</a></li>
+						<li class="top-navigation__item"><button class="top-navigation__item_button">ВХОД</button></li>
 					</ul>
 				<div class="clear"></div>	
 				</nav>
@@ -62,7 +62,7 @@
 				</section>
 				<section class="content-section">
 					<ul class="content-list">
-						<li class="news, content-list-item">
+						<li class="news content-list-item">
 							<h3>новости</h3>
 							<ul class="news-list">
 								<li class="nwes-list-item">
@@ -82,10 +82,10 @@
 								все новости
 							</a>
 						</li>
-						<li class="galary, content-list-item">
+						<li class="galary content-list-item">
 							<h3>ФОТОГАЛЕРЕЯ</h3>
-							<input class="button" type="button" name="galaryback" value="назад">
-							<input class="button" type="button" name="galaryforward" value="вперед">
+							<button class="button" name="galaryback" value="назад">назад</button>
+							<button class="button" name="galaryback" value="назад">вперед</button>
 						</li>
 						<li class="contact_info, content-list-item">
 							<h3>КОНТАКТНАЯ ИНФОРМАЦИЯ</h3>
@@ -106,26 +106,26 @@
 								ОБРАТНАЯ СВЯЗЬ
 							</a>
 						</li>
-						<li class="contact_form, content-list-item">
+						<li class="contact_form content-list-item">
 							<h3>ЗАПИСАТЬСЯ</h3>
 							<p>
 								УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ
 							</p>
-							<form action="#" method="post">
-								<ul class="contact_form-list">	
-									<li class="contact_form-list-item">
+							<form class="contact-form" action="#" method="post">
+								<ul class="contact-form__list">	
+									<li class="contact_form__list_item">
 										<label for="date">ДАТА</label>
 										<input id="date" type="text" name="date" placeholder="08.10.2017">
 									</li>
-									<li class="contact_form-list-item">
+									<li class="contact_form__list_item">
 										<label for="time">ВРЕМЯ</label>
 										<input id="time" type="text" name="time" placeholder="10:00">
 									</li>
-									<li class="contact_form-list-item">	
+									<li class="contact_form__list_item">	
 										<label for="name">ВАШЕ ИМЯ</label>
 										<input id="name" type="text" name="name" placeholder="Борода">
 									</li>
-									<li class="contact_form-list-item">
+									<li class="contact_form__list_item">
 										<label for="phone">ТЕЛЕФОН</label>
 										<input id="phone" type="tel" name="phone" placeholder="+7123456789">
 									</li>
@@ -141,7 +141,7 @@
 		</main>
 		<footer>
 			<div class="content">
-				<div class="bottom_contacts">
+				<div class="bottom-item bottom-contacts">
 					<p>
 						БАРБЕРШОП «БОРОДИНСКИЙ»
 					</p>	
@@ -155,20 +155,20 @@
 						ТЕЛЕФОН: +7 (495) 666-02-66
 					</p>
 				</div>
-				<div class="social">
-					<a href="#">VK</a>
-					<a href="#">FB</a>
-					<a href="#">Insta</a>
+				<div class="bottom-item bottom-social">
+					<p>давайте дружить!</p>
+					<ul>
+						<li class="bottom-social_item"><a href="#" aria-lable="вконтакте">VK</a></li>
+						<li class="bottom-social_item"><a href="#" aria-lable="facebook">FB</a></li>
+						<li class="bottom-social_item"><a href="#" aria-lable="instagram">Insta</a></li>
+					</ul>
 				</div>
-				<div>
-					<p>разработано:</p>
+				<div class="bottom-item bottom-develop">
+					<span>разработано:</span>
 					<a class="button" href="#">HTMLACADEMY</a>
 				</div>
+				<div class="clear"></div>
 			</div>	
 		</footer>
-		<div class="c111">
-			<div class="c222"></div>
-		</div>
-<!--	</div> End of Content-->
 </body>
 </html>
