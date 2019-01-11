@@ -92,26 +92,6 @@ main {
 	display: block;
 	margin: 0 auto;
 }
-/*
-.main_logo {
-	text-align: center;
-	padding-top: 57px;
-	visibility: hidden;
-}
-.main_logo h1 {
-	font-family: Lobster-Regular;
-	font-size: 30px;
-}
-.main_logo h2 {
-	text-shadow: #0e0e0e 3px 3px 0, #636466 5px 6px 0;
-}
-.main_logo h2 span{
-	font-size: 50px;
-	text-transform: uppercase;
-	vertical-align: -13px;
-	padding: 0 10px;	
-}
-*/
 .advantages {
 	margin: 30px 0;
 }
