@@ -58,13 +58,16 @@ body {
 header {
 	background-color: #000000;
 }
+.top-navigation ul {
+	display: flex;
+	align-items: stretch;
+}
 .top-navigation__item {
-	float: left;
 	margin-right: 5px
 }
 .top-navigation__item:last-child {
-	float: right;
 	margin-right: 0;
+	margin-left: auto;
 }
 .top-navigation__item_button {
 	background-color: #000000;
