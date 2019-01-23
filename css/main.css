@@ -12,11 +12,11 @@
 	src: url(../fonts/Lobster-Regular.woff) format("woff"), url(../fonts/Lobster-Regular.woff2) format("woff2");
 }
 .visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 a, .button {
 	text-decoration: none;
@@ -66,10 +66,17 @@ header {
 .top-navigation__item:last-child {
 	margin-right: 0;
 	margin-left: auto;
+	position: relative;
 }
-.top-navigation__item_button {
-	background-color: #000000;
-	border: none;
+.top-navigation__item_button::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 28px;
+	left: 10px;
+	width: 15px;
+	height: 15px;
+	background-color: red;
 }
 .top-navigation__item a, .top-navigation__item_button {
 	display: inline-block;
@@ -79,7 +86,12 @@ header {
 	font-size: 16px;
 	font-family: ptsansnarrowbold;
 }
-.top-navigation__item a:hover, .top-navigation__item a:focus, .top-navigation__item .top-navigation__item_button:hover {
+.top-navigation__item_button {
+	background-color: #000000;
+	border: none;
+	padding-left: 35px;
+}
+.top-navigation__item a:hover, .top-navigation__item a:focus, .top-navigation__item_button:hover, .top-navigation__item_button:focus {
 	outline: none;
 	background-color: #535353;
 }
@@ -140,8 +152,10 @@ main {
 	display: inline-block;
 	margin-bottom: 20px;
 }
-.content-list-item:nth-child(2n) {
-	box-shadow: -3px 0 4px #c9c6c4;
+.content-list-item:nth-child(2n+1) {
+	background-image: url(../img/shadow-img.png);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
 }
 .contact-form {
 	max-width: 300px;
@@ -199,4 +213,40 @@ footer {
 .bottom-develop span {
 	text-align: center;
 	display: block;
+}
+.modal {
+	position: fixed;
+	left: 50%;
+	color: #000000;
+	box-shadow: 0 0 30px #000000;
+}
+.modal-login {
+	top: 120px;
+	margin-left: -150px;
+	width: 300px;
+	height: 200px;
+	background-color: #ffffff;
+}
+.modal-close {
+	position: absolute;
+	top: 0;
+	right: -40px;
+	width: 25px;
+	height: 25px;
+	border: none;
+background-color: red;
+}
+.modal-close::before, .modal-close::after{
+	position: absolute;
+	top: 2px;
+	content: "";
+	width: 3px;
+	height: 17px;
+	background-color: #d0d0d0;
+}
+.modal-close::before {
+	transform: rotate(45deg);
+}
+.modal-close::after {
+	transform: rotate(135deg);
 }
