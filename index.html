@@ -174,11 +174,32 @@
 			</div>	
 		</footer>
 		<section class="modal modal-login">
-			qweqweqwe
-			qweqweqwe
-			qweqweqwe
+			<h2>ЛИЧНЫЙ КАБИНЕТ</h2>
+			<p>Введите пожалуйста свой логин и пароль</p>
+			<form class="login-form" method="post" name="login-form" action="https://echo.htmlacademy.ru">
+				<label for="login" class="visually-hidden">Введите логин</label>
+				<input id="login" type="text" name="login" placeholder="Логин">
+				<label for="password" class="visually-hidden">Введите пароль</label>
+				<input id="password" type="password" name="pass" placeholder="Пароль">
+				<input id="remember" type="checkbox" name="remember" checked="checked" value="agry">
+				<label for="remember"> Запомнить меня</label>
+				<a href="#">Я забыл пароль</a>
+				<input class="button" type="submit" name="enter" value="войти">
+			</form>
 			<button class="modal-close" type="button" aria-lable="закрить"></button>
 		</section>
 		<!--for test branch-->
+		<!--
+		<script type="text/javascript">
+			var loginlink = document.querySelector(".top-navigation__item_button");
+			loginlink.addEventListener("click", function (evt) {
+				evt.preventDefault();
+				console.log("Click event");
+			});
+			var popup = document.querySelector(".modal-login");
+
+		</script>
+	-->
+		<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
