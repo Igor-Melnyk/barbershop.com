@@ -99,7 +99,9 @@ header {
 	background-color: #535353;
 }
 main {
-	background: url(../img/background.png) no-repeat #070707;
+	background-color: #070707;
+	background-image: url(../img/background.png);
+	background-repeat: no-repeat;
 	padding: 62px 0;
 }	
 .index-logo {
@@ -218,6 +220,10 @@ footer {
 	display: block;
 }
 .modal {
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	position: fixed;
 	left: 50%;
 	color: #000000;
@@ -225,13 +231,37 @@ footer {
 	display: none;
 }
 .modal-login {
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	padding: 50px 80px 0;
 	width: 450px;
 	height: 385px;
 	background-color: #ffffff;
+}
+.animation-move {
+	animation-name: move;
+	animation-duration: 0.3s;
+}
+@keyframes move {
+	0% {
+		top: -50%;
+	}
+	100% {
+		top: 50%;
+	}
+}
+.animation-shake {
+	animation-name: shake;
+	animation-duration: 0.2s;
+}
+@keyframes shake {
+	0%, 100% {
+		margin: 0;
+	}
+	25%, 75% {
+		margin-left: -20px;
+	}
+	50% {
+		margin-left: 20px;
+	}
 }
 .modal-login h2{
 	font-size: 30px;
@@ -305,6 +335,22 @@ footer {
 }
 .login-form .button{
 	margin-top: 17px;
+}
+.modal-map {
+	width: 780px;
+	height: 576px;
+	padding: 15px;
+	background-color: #fff;
+}
+.modal-overlay {
+	z-index: 1;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-show {
 	display: block;

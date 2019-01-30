@@ -150,7 +150,7 @@
 						АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8
 					</p>	
 					<p>
-						<a href="#">КАК НАС НАЙТИ?</a>
+						<a href="#" class="contact-map">КАК НАС НАЙТИ?</a>
 					</p>
 					<p>	
 						ТЕЛЕФОН: +7 (495) 666-02-66
@@ -181,13 +181,18 @@
 				<input id="login" type="text" name="login" placeholder="Логин">
 				<label for="password" class="visually-hidden">Введите пароль</label>
 				<input id="password" type="password" name="pass" placeholder="Пароль">
-				<input id="remember" type="checkbox" name="remember" checked="checked" value="agry">
+				<input id="remember" type="checkbox" name="remember" checked="checked" value="1">
 				<label for="remember"> Запомнить меня</label>
 				<a href="#">Я забыл пароль</a>
 				<input class="button" type="submit" name="enter" value="войти">
 			</form>
 			<button class="modal-close" type="button" aria-lable="закрить"></button>
 		</section>
+		<section class="modal modal-map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.0936811279335!2d30.403676616064942!3d50.457980179476436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc5c8fd8f5f1%3A0x50ec0b54ca96876!2z0L_RgNC-0YHQvy4g0J_QvtCx0LXQtNGLLCA2Nywg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1548863261153" width="750" height="546" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<button class="modal-close map-close" type="button" aria-lable="закрить"></button>
+		</section>
+		<div class="modal-overlay"></div>
 		<!--for test branch-->
 		<!--
 		<script type="text/javascript">
